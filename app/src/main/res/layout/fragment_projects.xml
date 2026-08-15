@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Header / Category -->
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:letterSpacing="0.1"
+                    android:text="FREELANCER"
+                    android:textColor="#C85A32"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!-- Main Title -->
+                <TextView
+                    android:id="@+id/tvProjectTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="Project\nConfiguration"
+                    android:textColor="#111111"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <!-- Subtitle -->
+                <TextView
+                    android:id="@+id/tvProjectSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:text="Initialize new analysis parameters and security baselines."
+                    android:textColor="#666666"
+                    android:textSize="13sp" />
+
+                <!-- Form Container -->
+                <LinearLayout
+                    android:id="@+id/projectFormContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Field 1: Project Name -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:letterSpacing="0.05"
+                        android:text="PROJECT NAME"
+                        android:textColor="#A03A26"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etProjectName"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="#FAFAFA"
+                        android:hint="e.g. Project Phoenix"
+                        android:inputType="text"
+                        android:paddingHorizontal="16dp"
+                        android:textColor="#111111"
+                        android:textColorHint="#999999"
+                        android:textSize="14sp" />
+
+                    <!-- Field 2: Number of Features -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:letterSpacing="0.05"
+                        android:text="NUMBER OF FEATURES"
+                        android:textColor="#A03A26"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etFeatures"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="#FAFAFA"
+                        android:hint="e.g. 12"
+                        android:inputType="number"
+                        android:paddingHorizontal="16dp"
+                        android:textColor="#111111"
+                        android:textColorHint="#999999"
+                        android:textSize="14sp" />
+
+                    <!-- Field 3: Est. Budget -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:letterSpacing="0.05"
+                        android:text="EST. BUDGET (USD)"
+                        android:textColor="#A03A26"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etBudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="#FAFAFA"
+                        android:hint="$10,000 - 50,000"
+                        android:inputType="text"
+                        android:paddingHorizontal="16dp"
+                        android:textColor="#111111"
+                        android:textColorHint="#999999"
+                        android:textSize="14sp" />
+
+                    <!-- Field 4: Target Deadline -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:letterSpacing="0.05"
+                        android:text="TARGET DEADLINE"
+                        android:textColor="#A03A26"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etDeadline"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="#FAFAFA"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="Select date"
+                        android:inputType="date"
+                        android:paddingHorizontal="16dp"
+                        android:textColor="#111111"
+                        android:textColorHint="#999999"
+                        android:textSize="14sp" />
+
+                    <!-- Action Buttons Layout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <Button
+                            android:id="@+id/btnSave"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#FFFFFF"
+                            android:text="SAVE"
+                            android:textColor="#A03A26"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            app:strokeColor="#A03A26"
+                            app:strokeWidth="1dp" />
+
+                        <Button
+                            android:id="@+id/btnContinue"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#A03A26"
+                            android:text="CONTINUE"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

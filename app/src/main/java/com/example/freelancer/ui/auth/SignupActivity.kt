@@ -20,7 +20,6 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var etFullName: EditText
     private lateinit var etEmail: EditText
     private lateinit var etPassword: EditText
-    private lateinit var cbTerms: CheckBox
     private lateinit var btnCreateAccount: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +29,6 @@ class SignupActivity : AppCompatActivity() {
         etFullName = findViewById(R.id.etFullName)
         etEmail = findViewById(R.id.etEmail)
         etPassword = findViewById(R.id.etPassword)
-        cbTerms = findViewById(R.id.cbTerms)
         btnCreateAccount = findViewById(R.id.btnCreateAccount)
 
         btnCreateAccount.setOnClickListener {
@@ -59,14 +57,7 @@ class SignupActivity : AppCompatActivity() {
             return
         }
 
-        if (!cbTerms.isChecked) {
-            Toast.makeText(
-                this,
-                "Please accept the Terms of Service",
-                Toast.LENGTH_SHORT
-            ).show()
-            return
-        }
+
 
         btnCreateAccount.isEnabled = false
 

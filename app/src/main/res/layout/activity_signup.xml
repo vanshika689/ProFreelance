@@ -4,336 +4,280 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#051424"
+    android:background="#FAF9F0"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:gravity="center_horizontal"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp">
 
-        <!-- ==================== LOGO & BRAND ==================== -->
 
-        <LinearLayout
+
+
+        <TextView
+            android:id="@+id/tvSignUpTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Join FreelancePro"
+            android:textColor="#2D0A13"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="Create your account to start managing projects."
+            android:textColor="#4A0E1C"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFullName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:hint="Full Name"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeColor="#4A0E1C"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="#4A0E1C"
+            app:startIconDrawable="@drawable/ic_outline_person"
+            app:startIconTint="#4A0E1C">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="#2D0A13"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Email Address"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeColor="#4A0E1C"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="#4A0E1C"
+            app:startIconDrawable="@drawable/ic_outline_email"
+            app:startIconTint="#4A0E1C">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="#2D0A13"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ==================== PASSWORD ==================== -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Password"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeColor="#4A0E1C"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="password_toggle"
+            app:endIconTint="#4A0E1C"
+            app:hintTextColor="#4A0E1C"
+            app:startIconDrawable="@drawable/ic_outline_password"
+            app:startIconTint="#4A0E1C">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="#2D0A13"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- ==================== CREATE ACCOUNT ==================== -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:text="Create Account"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#4A0E1C"
+            app:cornerRadius="28dp" />
+
+        <!-- ==================== DIVIDER ==================== -->
+
+        <TextView
+            android:id="@+id/tvDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:gravity="center_vertical"
+            android:letterSpacing="0.1"
+            android:text="OR CONTINUE WITH"
+            android:textColor="#BCB095"
+            android:textSize="11sp" />
+
+        <!-- ==================== SOCIAL BUTTONS ==================== -->
+
+        <LinearLayout
+            android:id="@+id/llSocialButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/logoIcon"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/logo" />
+            <!-- GOOGLE -->
 
-            <TextView
-                android:id="@+id/brandName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="9dp"
-                android:fontFamily="sans-serif-black"
-                android:text="ProFreelance"
-                android:textColor="#00D1FF"
-                android:textSize="35sp" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnGoogle"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="#FFF9E7"
+                app:cardCornerRadius="26dp"
+                app:strokeColor="#4A0E1C"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/googleIcon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_google"
+                        android:contentDescription="Google" />
+
+                    <TextView
+                        android:id="@+id/googleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Google"
+                        android:textColor="#2D0A13"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- LINKEDIN -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnLinkedIn"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="#FFF9E7"
+                app:cardCornerRadius="26dp"
+                app:strokeColor="#4A0E1C"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/linkedinIcon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_linkedin"
+                        android:contentDescription="LinkedIn" />
+
+                    <TextView
+                        android:id="@+id/linkedinText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="LinkedIn"
+                        android:textColor="#2D0A13"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
 
-
-        <!-- ==================== TITLE ==================== -->
-
-        <TextView
-            android:id="@+id/createAccountTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="55dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="Create Account"
-            android:textColor="#FFFFFF"
-            android:textSize="30sp" />
-
-
-        <!-- ==================== SUBTITLE ==================== -->
-
-        <TextView
-            android:id="@+id/createAccountSubtitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="Start managing your freelance business smarter."
-            android:textColor="#A0A0A0"
-            android:textSize="16sp" />
-
-
-        <!-- ==================== FORM ==================== -->
+        <!-- ==================== LOGIN REDIRECT ==================== -->
 
         <LinearLayout
-            android:id="@+id/signupForm"
+            android:id="@+id/llLoginRedirect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="42dp"
-            android:orientation="vertical">
-
-
-            <!-- FULL NAME -->
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="FULL NAME"
-                android:textColor="#FFFFFF"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/etFullName"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_input_field"
-                android:hint="Enter your name"
-                android:inputType="textPersonName"
-                android:padding="16dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#707070"
-                android:textSize="16sp" />
-
-
-            <!-- EMAIL -->
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
-                android:text="EMAIL ADDRESS"
-                android:textColor="#FFFFFF"
-                android:textSize="13sp"
+                android:text="Log In"
+                android:textColor="#2D0A13"
+                android:textSize="16sp"
                 android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/etEmail"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_input_field"
-                android:hint="Enter your email address"
-                android:inputType="textEmailAddress"
-                android:padding="16dp"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#707070"
-                android:textSize="16sp" />
-
-
-            <!-- PASSWORD -->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
-                android:text="CREATE PASSWORD"
-                android:textColor="#FFFFFF"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passwordLayout"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="8dp"
-                app:boxBackgroundMode="outline"
-                app:boxBackgroundColor="#051424"
-                app:boxStrokeColor="#404B5A"
-                app:endIconMode="password_toggle"
-                app:endIconTint="#C5C5C5"
-                app:hintEnabled="false">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Enter your password"
-                    android:inputType="textPassword"
-                    android:padding="16dp"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#707070"
-                    android:textSize="16sp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <View
-                    android:id="@+id/strengthBar1"
-                    android:layout_width="0dp"
-                    android:layout_height="5dp"
-                    android:layout_weight="1"
-                    android:background="#00D1FF" />
-
-                <View
-                    android:id="@+id/strengthBar2"
-                    android:layout_width="0dp"
-                    android:layout_height="5dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_weight="1"
-                    android:background="#00D1FF" />
-
-                <View
-                    android:id="@+id/strengthBar3"
-                    android:layout_width="0dp"
-                    android:layout_height="5dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_weight="1"
-                    android:background="#263746" />
-
-                <TextView
-                    android:id="@+id/tvPasswordStrength"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:fontFamily="monospace"
-                    android:text="GOOD"
-                    android:textColor="#00D1FF"
-                    android:textSize="11sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <!-- ==================== TERMS ==================== -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="42dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/cbTerms"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:buttonTint="#808080" />
-
-                <TextView
-                    android:id="@+id/tvTerms"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:lineSpacingExtra="2dp"
-                    android:text="I agree to the Terms of Service and Privacy Policy."
-                    android:textColor="#D0D0D0"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-
-            <!-- ==================== CREATE ACCOUNT ==================== -->
-
-            <Button
-                android:id="@+id/btnCreateAccount"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="#00D1FF"
-                android:text="CREATE ACCOUNT"
-                android:textColor="#051424"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-
-            <!-- ==================== DIVIDER ==================== -->
-
-            <LinearLayout
-                android:id="@+id/dividerLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_weight="1"
-                    android:background="#263746" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:text="OR"
-                    android:textColor="#808080"
-                    android:textSize="12sp" />
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_weight="1"
-                    android:background="#263746" />
-
-            </LinearLayout>
-
-
-            <!-- ==================== GOOGLE ==================== -->
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnGoogle"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="24dp"
-                android:text="Sign up with Google"
-                android:textAllCaps="false"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                app:icon="@drawable/ic_google"
-                app:iconGravity="textStart"
-                app:iconTint="@null"
-                app:strokeColor="#263746"
-                app:strokeWidth="1dp" />
-
-
-            <!-- ==================== LINKEDIN ==================== -->
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLinkedIn"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="16dp"
-                android:text="Sign up with LinkedIn"
-                android:textAllCaps="false"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                app:icon="@drawable/ic_linkedin"
-                app:iconGravity="textStart"
-                app:iconTint="@null"
-                app:strokeColor="#263746"
-                app:strokeWidth="1dp" />
-
-
-            <!-- ==================== LOGIN ==================== -->
-
-            <TextView
-                android:id="@+id/footerLink"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="55dp"
-                android:layout_marginBottom="30dp"
-                android:text="Already have an account? Login"
-                android:textColor="#D0D0D0"
-                android:textSize="14sp" />
+                android:layout_marginTop="2dp"
+                android:text="Already have an account?"
+                android:textColor="#4A0E1C"
+                android:textSize="13sp" />
 
         </LinearLayout>
 

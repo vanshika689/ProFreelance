@@ -17,8 +17,8 @@
         <activity android:name=".ui.auth.SignupActivity"
             android:exported="false"/>
 
-        <activity android:name=".ui.HomeActivity"
-            android:exported="false"/>
+       <activity android:name=".ui.HomeActivity"
+           android:exported="false"/>
 
         <activity
             android:name="com.example.freelancer.ui.auth.LoginActivity"
