@@ -6,6 +6,10 @@ plugins {
 android {
     namespace = "com.example.freelancer"
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     compileSdk {
         version = release(37) {
             minorApiLevel = 1
@@ -62,6 +66,7 @@ dependencies {
     implementation(
         "io.ktor:ktor-client-android:${libs.versions.ktor.get()}"
     )
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

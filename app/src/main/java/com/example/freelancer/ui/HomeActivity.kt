@@ -7,7 +7,7 @@ import com.example.freelancer.R
 import com.example.freelancer.ui.fragments.ContractsFragment
 import com.example.freelancer.ui.fragments.DashboardFragment
 import com.example.freelancer.ui.fragments.ProfileFragment
-import com.example.freelancer.ui.fragments.ProjectsFragment
+import com.example.freelancer.ui.projects.ProjectsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
